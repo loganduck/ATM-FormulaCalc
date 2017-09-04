@@ -1,21 +1,25 @@
 import java.util.Scanner;
 
 /**
- * Enter a value in whole dollars and then displays
- * the combinations of twenties, tens, fives, and ones.
+ * Enter a value in whole dollars.
+ * The output displays the denominations
+ * of twenties, tens, fives, and ones of
+ * the value entered
+ *  
  * The input value shall not exceed 500 dollars. 
  * 
  * @author LoganDuck
+ * @version 9/4/17
  */
 public class ATM {
 	static int twenties, tens, fives, ones; 
-	static String output;
 	static int amount;
 	static Scanner scan = new Scanner(System.in);
 		
 	public static void main(String[] args) {
 		System.out.print("Enter the amount: $");
 		amount = scan.nextInt();
+		String initial = Integer.toString(amount);
 		while (!(amount <= 500)) {
 			System.out.print("Limit of $500 exceeded! Enter a new value: ");
 			amount = scan.nextInt();
@@ -25,7 +29,7 @@ public class ATM {
 				+ "\n\t$10: " + getTens()
 				+ "\n\t$5: " + getFives()
 				+ "\n\t$1: " + getOnes()
-				+ "\n\n\t$399 = (" + twenties + " * $20)"
+				+ "\n\n\t" + initial + " = (" + twenties + " * $20)"
 				+ " + (" + tens + " * $10)"
 				+ " + (" + fives + " * $5)"
 				+ " + (" + ones + " * $1)");
