@@ -34,6 +34,8 @@ public class ATM {
 				+ " + (" + tens + " * $10)"
 				+ " + (" + fives + " * $5)"
 				+ " + (" + ones + " * $1)");
+		
+		System.out.println("\n\nView more code: https://github.com/loganduck");
 	}
 
 	static int currentNum;
