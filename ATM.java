@@ -20,10 +20,11 @@ public class ATM {
 		System.out.print("Enter the amount: $");
 		amount = scan.nextInt();
 		String initial = Integer.toString(amount);
-		while (!(amount <= 500)) {
-			System.out.print("Limit of $500 exceeded! Enter a new value: ");
+		while (!(amount <= 500) || !(amount > 0)) {
+			System.out.print("Limit of 0 - 500 exceeded! Enter a new value: ");
 			amount = scan.nextInt();
 		}
+		
 		System.out.println("Bills by denomination: " 
 				+ "\n\t$20: " + getTwenties()
 				+ "\n\t$10: " + getTens()
